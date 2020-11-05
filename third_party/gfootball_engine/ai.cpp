@@ -14,7 +14,7 @@
 #undef NDEBUG
 
 #include "src/game_env.hpp"
-#include <python3.6/Python.h>
+#include <Python.h>
 
 #include <boost/python.hpp>
 #include <boost/interprocess/managed_shared_memory.hpp>
