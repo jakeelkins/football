@@ -23,6 +23,6 @@ N_CORES=$(python -c 'import multiprocessing as mp; print(mp.cpu_count())')
 set -e
 # Delete pre-existing version of CMakeCache.txt to make 'pip3 install' work.
 rm -f third_party/gfootball_engine/CMakeCache.txt
-#pushd third_party/gfootball_engine && cmake . && make -j $N_CORES && popd
-pushd third_party/gfootball_engine && cmake . && make -j $N_CORES -I/usr/lib/python3.6 && popd
+pushd third_party/gfootball_engine && cmake . && make -j $N_CORES && popd
+#pushd third_party/gfootball_engine && cmake . && make -j $N_CORES -I/usr/lib/python3.6 && popd
 pushd third_party/gfootball_engine && ln -sf libgame.$LIB_EXTENSION _gameplayfootball.so && popd
