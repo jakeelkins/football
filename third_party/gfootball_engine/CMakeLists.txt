@@ -43,12 +43,11 @@ include_directories(${SDL2_TTF_DIRS})
 FIND_PACKAGE(SDL2_gfx REQUIRED)
 include_directories(${SDL2_GFX_DIRS})
 
-
-find_package(PythonLibs 3.7 EXACT REQUIRED)
-message("Using Python: ${PYTHONLIBS_VERSION_STRING}")
-string(REPLACE "." ";" VERSION_LIST ${PYTHONLIBS_VERSION_STRING})
-list(GET VERSION_LIST 0 PYTHON_MAJOR)
-list(GET VERSION_LIST 1 PYTHON_MINOR)
+# JAKES EDIT IS HERE -- SPECIFY VERSION
+set(PYTHON_LIBRARIES /usr/local/lib/libpython3.6m.a)
+set(PYTHON_INCLUDE_DIRS /usr/include/python3.6)
+set(PYTHON_MAJOR 3)
+set(PYTHON_MINOR 6) 
 
 # Include the python boost.
 # Unfortunately different linux distributions are using different naming.
